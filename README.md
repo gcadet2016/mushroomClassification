@@ -31,3 +31,9 @@ De plus vous serez très certainement amenés à l'avenir à utiliser VsCode pou
 2- Créer votre branche de travail  
 Recommandation: mettre son alias dans le nom de la branche afin qu'on sache à qui elle appartient:
 
+Par défaut vous êtes dans la branche "main".  
+Cliquer sur la branche main  
+![Alt text](img\mainBranch.png)  
+Le menu de commande s'ouvre:  
+![Alt text](img\newBranch1.png)  
+Cliquer sur **Create new branch...**
