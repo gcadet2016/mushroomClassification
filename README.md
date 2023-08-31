@@ -9,7 +9,25 @@
 
 - Aller sur la page https://github.com/DataScientest-Studio/Jul23_bds_champignons  
 - Clicker sur le bouton  
- :::image type="content" source="image.png" alt-text="Button":::  
-- 
+![Button](img\button.png)
+- Copier l'url  
+![Urlcopy](img\url_copy.png)
 
+
+- Ouvrir un invite de commande powershell  
+- Executer les commandes suivantes (à adapter selon votre besoin)  
+Le plus important est la commande **git clone**
+![GithubClone](img\GithubClone.png) 
+
+La suite de ce tutoriel est écrit pour VSCode.  
+- L'usage de Git dans VsCode est simple.  
+- L'usage de Git en lignes de commandes est complexe
+
+De plus vous serez très certainement amenés à l'avenir à utiliser VsCode pour vos projets.
+
+3- [Télécharger et Installer VsCode](https://code.visualstudio.com/download)  
+
+
+2- Créer votre branche de travail  
+Recommandation: mettre son alias dans le nom de la branche afin qu'on sache à qui elle appartient:
 
