@@ -50,4 +50,13 @@ Remarque: vous pouvez faire plusieurs changements, plusieurs commits, l'importan
 - Vérifier la liste des fichiers que vous venez de modifier (optionel).
 - Cliquer sur le bouton **Commit**  
 
-4- Poussez votre branche vers Github
+4- Poussez votre branche vers Github: cliquer sur **Sync Changes**  
+![Alt text](img\syncBranch.png)  
+
+5- Vérifier sur Github (optionel)
+- Afficher la liste des branches
+- Sélectionnez votre branche  
+![Alt text](img\selectBranch.png)  
+- Accédez à vos fichiers
+![Alt text](img\branch.png)
+
