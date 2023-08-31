@@ -60,3 +60,10 @@ Remarque: vous pouvez faire plusieurs changements, plusieurs commits, l'importan
 - Accédez à vos fichiers
 ![Alt text](img\branch.png)
 
+6- En cours de développement, vous pouvez vérifier le status de votre branche:  
+ici  
+![Alt text](img\status1.png)  
+Le chiffre indique le nombre de changement en attente de commit  
+et ici  
+![Branch status](img\status2.png)  
+L'étoile signifie que votre branche local devrait être poussée vers GitHub car il y a des changements en local non répliqués sur Github.
