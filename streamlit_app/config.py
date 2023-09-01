@@ -11,7 +11,7 @@ TITLE = "My Awesome App"
 
 TEAM_MEMBERS = [
     Member(
-        name="John Doe",
+        name="Guillaume Cadet",
         linkedin_url="https://www.linkedin.com/in/charlessuttonprofile/",
         github_url="https://github.com/charlessutton",
     ),
