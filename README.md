@@ -43,8 +43,10 @@ Le menu de commande s'ouvre en haut de VsCode:
 ![Alt text](img\newBranch1.png)  
 - Cliquer sur **Create new branch...**  
 - Saisir le nom de la nouvelle branche. Exemple "Jacky_myFirstNotebook".  
-Désormais vous êtes dans votre branche de travail qui est a été clonéé à partir de la branche "main".
-Vous pouvez commencer à travailler et faire vos changements.
+Désormais vous êtes dans votre branche de travail qui est a été clonée à partir de la branche "main".
+Vous pouvez commencer à travailler et faire vos changements.  
+Cette opération est l'équivalant de la commande  
+`git branch Jacky_myFirstNotebook`  
 
 Dans quelle branche suis-je ? 
 C'est visible en bas à gauche de VSCode. 
@@ -72,23 +74,27 @@ Les personnes qui vont revoir le code peuvent facilement vérifier l'ensemble de
 - Vérifier la liste des fichiers que vous venez de modifier (optionel).
 - Cliquer sur le bouton **Commit**  
 
+Cette opération est équivalante à la commande `git commit -M "mon changement"`
 
 ### 6- Poussez votre branche vers Github
 Cliquer sur **Sync Changes**  
 
-![Alt text](img\syncBranch.png)  
+![Git push](img\syncBranch.png)  
+Cete opération est equivalente à la commande `git push`.
 
 ### 7- Vérifier sur Github (optionel)
 - Afficher la liste des branches
 - Sélectionnez votre branche  
-![Alt text](img\selectBranch.png)  
+![Branch list](img\selectBranch.png)  
 - Accédez à vos fichiers
-![Alt text](img\branch.png)
+![File list](img\branch.png)
 
 ### 8- En cours de développement, vous pouvez vérifier le status de votre branche:  
-ici  
-![Alt text](img\status1.png)  
+Ici  
+![Commit status](img\status1.png)  
 Le chiffre indique le nombre de changements en attente de commit.  
-et ici  
+Et ici  
 ![Branch status](img\status2.png)  
-L'étoile signifie que votre branche local devrait être poussée vers GitHub car il y a des changements en local non répliqués sur Github.
+- L'étoile signifie qu'il y a des changements non commités
+- Le premier chiffre signifie qu'il y a des mises à jour dans Github qui n'ont pas été récupérées localement. Votre branche locale est en retard sur Github.
+- Le seoncd chiffre signifie que votre branche local possède des commits non encore répliquées vers Github. Votre branche est en avance sur Github. Vous devrez pousser vers GitHub.
