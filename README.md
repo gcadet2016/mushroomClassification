@@ -46,29 +46,49 @@ Le menu de commande s'ouvre en haut de VsCode:
 Désormais vous êtes dans votre branche de travail qui est a été clonéé à partir de la branche "main".
 Vous pouvez commencer à travailler et faire vos changements.
 
-### 4- Sauvegarder tous vos fichiers avant de pousser votre branche vers GitHub
-4- Faire un commit qui va inclure vos changements.  
+Dans quelle branche suis-je ? 
+C'est visible en bas à gauche de VSCode. 
+![Current Branch](img\currentBranch.png)  
+
+### 4- Sauvegarder tous vos fichiers 
+Lorsque vous avez fait une mise à jour, sauvegardez vos fichiers dans le dossier local du projet Github.  
+Vous devez voir les changement si vous cliquez sur l'icone git.   
+![Alt text](img\status1.png)  
+
+### 5- Faire un commit qui va inclure vos changements.  
 Remarque: vous pouvez faire plusieurs changements, plusieurs commits, l'important étant que la dernière opération doit être un commit avant de pousser votre branche dans GitHub.  
+Dans l'exemple ci-dessous, le fichier README.md a été mis à jour.  
+Maintenant il faut faire un commit avec un petit commentaire.  
+**A quoi sert le commit ?** C'est un regroupement de changements faits par un developpeur dans le cadre d'une évolution (nouvelle fonctionnalité, bug fixé,...).  
+Les personnes qui vont revoir le code peuvent facilement vérifier l'ensemble des changements. Les commits sont historisés afin de pouvoir tracer l'historique des changements dans le projet.  
+**Recommandations:**
+- ne pas faire un commit toutes les 2 minutes.
+- Ne pas faire un unique commit par semaine.  
+- Faire un commit lorsque vous avez fait un changement et qu'il est testé.  
+
 ![Alt text](img\commit.png)
 
 - **Saisir un court message** résumant en quoi consiste le changement
 - Vérifier la liste des fichiers que vous venez de modifier (optionel).
 - Cliquer sur le bouton **Commit**  
 
-4- Poussez votre branche vers Github: cliquer sur **Sync Changes**  
+
+### 6- Poussez votre branche vers Github
+Cliquer sur **Sync Changes**  
+
 ![Alt text](img\syncBranch.png)  
 
-5- Vérifier sur Github (optionel)
+### 7- Vérifier sur Github (optionel)
 - Afficher la liste des branches
 - Sélectionnez votre branche  
 ![Alt text](img\selectBranch.png)  
 - Accédez à vos fichiers
 ![Alt text](img\branch.png)
 
-6- En cours de développement, vous pouvez vérifier le status de votre branche:  
+### 8- En cours de développement, vous pouvez vérifier le status de votre branche:  
 ici  
 ![Alt text](img\status1.png)  
-Le chiffre indique le nombre de changement en attente de commit  
+Le chiffre indique le nombre de changements en attente de commit.  
 et ici  
 ![Branch status](img\status2.png)  
 L'étoile signifie que votre branche local devrait être poussée vers GitHub car il y a des changements en local non répliqués sur Github.
