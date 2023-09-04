@@ -12,10 +12,10 @@ TITLE = "My Awesome App"
 TEAM_MEMBERS = [
     Member(
         name="John Doe",
-        linkedin_url="https://www.linkedin.com/in/guillaume-cadet-387b61100/",
-        github_url="https://github.com/gcadet2016",
+        linkedin_url="https://www.linkedin.com/in/charlessuttonprofile/",
+        github_url="https://github.com/charlessutton",
     ),
     Member("Jane Doe"),
 ]
 
-PROMOTION = "Promotion Bootcamp Data Scientist - July 2023"
+PROMOTION = "Promotion Bootcamp Data Scientist - April 2021"

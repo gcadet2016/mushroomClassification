@@ -127,3 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Fichier CSV volumineux
+data/observations_mushroom.csv
