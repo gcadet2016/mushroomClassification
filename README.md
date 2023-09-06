@@ -6,20 +6,21 @@
 Jul23_bds_champignons
     **+ data** *(Pour comprendre l'utilité de chaque csv, se référer à ../notebooks/'creation datasets')*
         - especes_classification.csv
-        - infos_images.csv *# CSV utilisé pour l'entainement des modèles (label + lien vers les img)*
+        - top10.csv *# CSV utilisé pour l'entainement des modèles (label + lien vers les img)*
+        - infos_images.csv
         - observations_mushroom.csv
     **+ img** *(contient des images utilisées sur le repository)*
     **+ knowledge_base**
-        - E02 - Entrainement et callbacks *# Notebook base de connaissances contenant des callbacks et leurs arguments* 
-    **+ modele_cnn**
+        - E02 - Entrainement et callbacks *# Notebook base de connaissances contenant des callbacks et leurs arguments*
+        -  
+    **+ modele** (contiendra à terme les modèles enregistrés)
 
 
     **+ notebooks**
         - creation_datasets.ipynb *# Sert à construire les datasets à partir de observations_mushroom.csv*
         - analyses.ipynb          *# Sert à réaliser les analyses des jeux de données et des images*
-        - 1_modele_echantillon.ipynb *# Modèle CNN basé sur un echantillon (10%) des images (top10 des espèces)*
-        - 2_modele_complet         *# Modèle CNN basé sur l'ensemble des images (top10 des expèces)*
-        - 3_modele_optuna          *# Modèle CNN dont la recherche des paramètres se fait via la librairie Optuna*
+        - cnn_1.ipynb             *# Modèle CNN premièere iteration*
+
 
     **+ streamlit_app**
 
