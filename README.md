@@ -13,18 +13,19 @@ Jul23_bds_champignons
     **+ knowledge_base**
         - E02 - Entrainement et callbacks *# Notebook base de connaissances contenant des callbacks et leurs arguments*
         -  
-    **+ modele** (contiendra à terme les modèles enregistrés)
+    **+ model** (contiendra à terme les modèles enregistrés)
 
 
     **+ notebooks**
         - creation_datasets.ipynb *# Sert à construire les datasets à partir de observations_mushroom.csv*
         - analyses.ipynb          *# Sert à réaliser les analyses des jeux de données et des images*
-        - cnn_1.ipynb             *# Modèle CNN premièere iteration*
+        - CNN.ipynb               *# Modèle CNN premièere iteration*
+        - etude_CNN               *# Charger un modèle entrainé et enregistré pour étude (ex: interprétabilité)
 
 
     **+ streamlit_app**
 
-*   - .gitignore
+    - .gitignore
     - app.py
     - README.md
     - requirements.txt*
