@@ -4,33 +4,47 @@
 # Arborescence
 
 Jul23_bds_champignons
-    **+ data** *(Pour comprendre l'utilité de chaque csv, se référer à ../notebooks/'creation datasets')*
+
+**+ data** *(Pour comprendre l'utilité de chaque csv, se référer à ../notebooks/'creation datasets')*
         - especes_classification.csv
-        - top10.csv *# CSV utilisé pour l'entainement des modèles (label + lien vers les img)*
+        - especes_key.csv
+        - img_supp.csv *Liste des images supprimées du jeu de données d'origine*
         - infos_images.csv
-        - observations_mushroom.csv
-    **+ img** *(contient des images utilisées sur le repository)*
-    **+ knowledge_base**
-        - E02 - Entrainement et callbacks *# Notebook base de connaissances contenant des callbacks et leurs arguments*
-        -  
-    **+ model** (contiendra à terme les modèles enregistrés)
+        - top10.csv *# CSV utilisé pour l'entainement des modèles (label + lien vers les img)*
+        - observations_mushroom.csv *(Ignoré cause poids >100MO)
+    
+
+**+ img** *(contient des images utilisées sur le repository)*
 
 
-    **+ notebooks**
-        - creation_datasets.ipynb *# Sert à construire les datasets à partir de observations_mushroom.csv*
-        - analyses.ipynb          *# Sert à réaliser les analyses des jeux de données et des images*
-        - CNN.ipynb               *# Modèle CNN premièere iteration*
-        - etude_CNN               *# Charger un modèle entrainé et enregistré pour étude (ex: interprétabilité)
+**+ knowledge_base**
+    - E02 - Entrainement et callbacks *# Notebook base de connaissances contenant des callbacks et leurs arguments*
+
+  
+**+ model** *(Modèles entrainés et enregistrés*)
+    - gpot_v01_echantillon *entrainement 1er modèle sur echantillon (10%) de données
+    - gpot_v01_full        *entrainement 1er modèle sur set complet de données
+    - gpot_v01_full_tri    *entrainement 1er modèle sur set de données triées (suppression des images poubelles)
+    
+    - gpot_v02_ech_tri     *entrainement 2nd modèle sur echantillon (10%) de données triées (suppression des images poubelles)
+
+    - *A venir :*
+    - gpot_v02_full_tri     *entrainement 2nd modèle sur set complet de données triées (suppression des images poubelles)
 
 
-    **+ streamlit_app**
+**+ notebooks**
+    - 1_creation_datasets.ipynb *# Sert à construire les .csv à partir de observations_mushroom.csv*
+    - 2_analyses.ipynb          *# Sert à réaliser les analyses des jeux de données et des images*
+    - 3_CNN.ipynb               *# Entrainer un CNN à partir du jeu de données*
+    - 4_etude_CNN               *# Charger un modèle entrainé et mener une étude sur le modèle
+    - 5_optuna                  *# Entrainer un CNN avec optimisation des paramètres avec la librairie optuna (notebook en projet)
 
+
+**+ streamlit_app**
     - .gitignore
     - app.py
     - README.md
     - requirements.txt*
-
-
 
 
 
