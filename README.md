@@ -22,9 +22,9 @@ Jul23_bds_champignons
 
   
 **+ model** *(Modèles entrainés et enregistrés*)
-    - gpot_v01_echantillon *entrainement 1er modèle sur echantillon (10%) de données
-    - gpot_v01_full        *entrainement 1er modèle sur set complet de données
-    - gpot_v01_full_tri    *entrainement 1er modèle sur set de données triées (suppression des images poubelles)
+    - gpot_v01_echantillon *entrainement 1er modèle sur echantillon (10%) de données*
+    - gpot_v01_full        *entrainement 1er modèle sur set complet de données*
+    - gpot_v01_full_tri    *entrainement 1er modèle sur set de données triées (suppression des images poubelles)*
     
     - gpot_v02_ech_tri     *entrainement 2nd modèle sur echantillon (10%) de données triées (suppression des images poubelles)
 
