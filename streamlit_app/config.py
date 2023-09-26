@@ -2,6 +2,8 @@
 
 Config file for Streamlit App
 
+Note: typo convension: global variables are uppercase
+
 """
 
 from member import Member
@@ -28,3 +30,6 @@ TEAM_MEMBERS = [
 ]
 
 PROMOTION = "Promotion Bootcamp Data Scientist - July 2023"
+
+INFOS_IMAGES_PATH = '../data/infos_images.csv'
+TOP10_PATH = '../data/top10.csv'

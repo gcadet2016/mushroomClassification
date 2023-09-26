@@ -2,7 +2,9 @@ from collections import OrderedDict
 
 import streamlit as st
 
-# TODO : change TITLE, TEAM_MEMBERS and PROMOTION values in config.py.
+# Global variables in config.py: 
+#   TITLE, TEAM_MEMBERS, PROMOTION values
+#   path to files
 import config
 
 # TODO : you can (and should) rename and add tabs in the ./tabs folder, and import them here.
@@ -37,7 +39,9 @@ def run():
         "https://dst-studio-template.s3.eu-west-3.amazonaws.com/logo-datascientest.png",
         width=200,
     )
+
     tab_name = st.sidebar.radio("", list(TABS.keys()), 0)
+
     st.sidebar.markdown("---")
     st.sidebar.markdown(f"## {config.PROMOTION}")
 
@@ -45,9 +49,9 @@ def run():
     for member in config.TEAM_MEMBERS:
         st.sidebar.markdown(member.sidebar_markdown(), unsafe_allow_html=True)
 
-    tab = TABS[tab_name]
+    tab = TABS[tab_name]    # Get current tab selected in the sidebar 
 
-    tab.run()
+    tab.run()               # run the tab code
 
 
 if __name__ == "__main__":
