@@ -25,7 +25,6 @@ def create_tf_dataset(image_path, img_dim, labels, batch_size, augment = False):
     dataset = tf.data.Dataset.from_tensor_slices((image_path, labels))
 
     # Application de l'augmentation d'images
-    #dataset = dataset.map(augment_img(image_path, labels, img_dim, augment), num_parallel_calls=tf.data.experimental.AUTOTUNE)
     dataset = dataset.map(lambda image_path, label: augment_img(image_path, label, img_dim, augment),
                           num_parallel_calls=tf.data.experimental.AUTOTUNE)
     
@@ -70,6 +69,8 @@ def augment_img(image_path, labels, img_dim, augment):
 
         # Pre-processing pour transfert learning, modèle efficienNet
         img = preprocess_input(img)
+
+
 
         # Augmentations aléatoires des images :
 
