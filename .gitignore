@@ -130,3 +130,5 @@ dmypy.json
 
 # Fichier CSV volumineux
 data/observations_mushroom.csv
+data/observations_mushroom_cleaned.csv
+data/observations_mushroom_cleaned_sorted_rank.csv

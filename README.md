@@ -1,21 +1,6 @@
 # Jul23_bds_champignons
 
-# Streamlit
 
-Dans VsCode  
-1- Ouvrir le dossier du projet.  
-2- Ouvrir un terminal pws  
-3- Dans le terminal, lancer la commande: ```cd streamlit_app```   
-4- Lancer la commande: ```streamlit run app.py```
-
-Le portail doit s'afficher dans le navigateur web
-
-### Mise à jour du code
-
-Arrêter l'app streamlit en cours: ```ctrl+C dans la console VsCode```  
-Fermer la page web  
-Mettre à jour le code  
-Relancer streamlit avec la ligne de commannde ci-dessus (3-).    
 # Arborescence
 
 Jul23_bds_champignons
