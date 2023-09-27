@@ -2,12 +2,10 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 from PIL import Image
-import config
-import matplotlib.pyplot as plt
-import seaborn as sns
 
-title = "Exploration de données"
-sidebar_name = "Exploration de données"
+
+title = "Second tab"
+sidebar_name = "Second Tab"
 
 
 def run():
@@ -82,85 +80,36 @@ def run():
 
     # Calcul des pourcentages pour chaque valeur (espèce) :
 
-    total = infos_images['label'].count()
-    pourcentages_valeurs_top10 = (top10_label / total) * 100    # uniquement le top 10
-    pourcentages_valeurs_tout = (top10_et_reste / total) * 100  # Toutes les espèces (top 10 + le reste)
+        ## Test
 
-    # Construction du graphique :
-    fig = plt.figure(figsize=(8,5))
-    #plt.grid(True, linestyle = '--')
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida urna vel tincidunt vestibulum. Nunc malesuada molestie odio, vel tincidunt arcu fringilla hendrerit. Sed leo velit, elementum nec ipsum id, sagittis tempus leo. Quisque viverra ipsum arcu, et ullamcorper arcu volutpat maximus. Donec volutpat porttitor mi in tincidunt. Ut sodales commodo magna, eu volutpat lacus sodales in. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam interdum libero non leo iaculis bibendum. Suspendisse in leo posuere risus viverra suscipit.
 
-    plt.title('Distribution de \'label\'')
-    plt.xlabel('Espèces')
-    plt.xticks(rotation = 70)
-    plt.ylabel('Pourcentage d\'apparition')
-    plt.bar(pourcentages_valeurs_tout.index, pourcentages_valeurs_tout, color = 'g')
+        Nunc eu tortor dolor. Etiam molestie id enim ut convallis. Pellentesque aliquet malesuada ipsum eget commodo. Ut at eros elit. Quisque non blandit magna. Aliquam porta, turpis ac maximus varius, risus elit sagittis leo, eu interdum lorem leo sit amet sapien. Nam vestibulum cursus magna, a dapibus augue pellentesque sed. Integer tincidunt scelerisque urna non viverra. Sed faucibus leo augue, ac suscipit orci cursus sed. Mauris sit amet consectetur nisi.
+        """
+    )
 
+    chart_data = pd.DataFrame(np.random.randn(20, 3), columns=list("abc"))
 
-    # Affichage les pourcentages au-dessus des barres
-    for i, value in enumerate(pourcentages_valeurs_tout):
-        plt.text(i, value + 1, f"{value:.2f}%", ha='center', va='bottom')
-
-
-    plt.annotate(' TOP 10 ', xy=(9, 10), xytext=(2.5, 60), arrowprops={'facecolor':'blue'})
-    plt.annotate(' ', xy=(0, 10), xytext=(2.5, 60), arrowprops={'facecolor':'blue'});
-
-    st.pyplot(fig)
+    st.line_chart(chart_data)
 
     st.markdown(
         """
-        ## Dimensions des images
-        l'analyse de la distribution des dimensions des images nous permet de constater que :
-            - Les images sont généralement de largeur 320 pixels   
-        -	Les images sont généralement de hauteur 240 px avec également une partie assez importante d’entre elles de hauteurs 220 px et 320 px  
-        -	Le total de pixels en hauteur x largeur (sans les canaux RGB), correspond en majorité à 75 000 px, une partie importante d’entre elles comporte 70 000 px.
+        ## Test 2
+
+        Proin malesuada diam blandit orci auctor, ac auctor lacus porttitor. Aenean id faucibus tortor. Morbi ac odio leo. Proin consequat facilisis magna eu elementum. Proin arcu sapien, venenatis placerat blandit vitae, pharetra ac ipsum. Proin interdum purus non eros condimentum, sit amet luctus quam iaculis. Quisque vitae sapien felis. Vivamus ut tortor accumsan, dictum mi a, semper libero. Morbi sed fermentum ligula, quis varius quam. Suspendisse rutrum, sapien at scelerisque vestibulum, ipsum nibh fermentum odio, vel pellentesque arcu erat at sapien. Maecenas aliquam eget metus ut interdum.
+        
+        ```python
+
+        def my_awesome_function(a, b):
+            return a + b
+        ```
+
+        Sed lacinia suscipit turpis sit amet gravida. Etiam quis purus in magna elementum malesuada. Nullam fermentum, sapien a maximus pharetra, mauris tortor maximus velit, a tempus dolor elit ut lectus. Cras ut nulla eget dolor malesuada congue. Quisque placerat, nulla in pharetra dapibus, nunc ligula semper massa, eu euismod dui risus non metus. Curabitur pretium lorem vel luctus dictum. Maecenas a dui in odio congue interdum. Sed massa est, rutrum eu risus et, pharetra pulvinar lorem.
         """
     )
-    import cv2
-    def extract_features(url_img):
 
-        '''
-        Extrait les features des images, les renvoient sous forme d'un DataFrame contenant les largeurs, hauteurs, et moyennes RGB
-            - url_img : Chemin des images
-        '''
+    st.area_chart(chart_data)
 
-        img = cv2.imread(url_img)
-        hauteur, largeur, canal = img.shape
-        features = {
-            'largeur': largeur,
-            'hauteur': hauteur,
-            'moyenne_rouge': np.mean(img[:,:,2]),
-            'moyenne_vert': np.mean(img[:,:,1]),
-            'moyenne_bleu': np.mean(img[:,:,0])}
-        
-        return features
-    
-    # Extraction des features des images du top 10
-    liste_features = []
-
-    for index, row in top10.iterrows():
-        filepath = row['image_url']
-        features = extract_features(filepath)
-        liste_features.append(features)
-
-    features_top10 = pd.DataFrame(liste_features)
-    features_top10['moyenne_couleurs'] = (features_top10['moyenne_rouge']\
-                                            + features_top10['moyenne_vert']\
-                                            + features_top10['moyenne_bleu']) / 3
-
-    features_top10['label'] = top10['label']
-    features_top10.head()
-
-
-    fig = plt.figure(figsize=(16,12))
-    sns.catplot(features_top10, kind='boxen')
-    plt.grid(False)
-    plt.title('Box Plot des features')
-    plt.xticks(rotation = 45);
-
-    st.pyplot(fig)
-
-    
     st.markdown(
         """
         ## Test 3
