@@ -1,7 +1,7 @@
 import streamlit as st
 
 
-title = "Classification de champignon"
+title = "Classification de champignons"
 sidebar_name = "Introduction"
 
 

@@ -40,7 +40,7 @@ def run():
     fig = plt.figure(figsize=(12, 20))
     sns.countplot(data=infos_images, y="label", order=infos_images["label"].value_counts().index)
     plt.xlabel("Nombre d'images")
-    plt.ylabel("Espèce de champignon")
+    plt.ylabel("Espèces de champignon")
     plt.title("Répartition des espèces de champignons dans l'échantillon")
     st.pyplot(fig)
 
@@ -59,7 +59,7 @@ def run():
     top10 = pd.read_csv(config.TOP10_PATH, low_memory=False)
     fig = plt.figure(figsize=(8, 6))
     sns.countplot(data=top10, x="label", order=top10["label"].value_counts().index)
-    plt.xlabel("Espèce de champignon")
+    plt.xlabel("Espèces de champignon")
     plt.xticks(rotation=70)
     plt.ylabel("Nombre d'images")
     plt.title("TOP 10 des espèces les plus représentées")
