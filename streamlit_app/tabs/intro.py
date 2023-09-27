@@ -1,7 +1,8 @@
 import streamlit as st
 
 
-title = "My Awesome DataScientest project."
+
+title = "Classification de champignons"
 sidebar_name = "Introduction"
 
 

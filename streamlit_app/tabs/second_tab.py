@@ -14,8 +14,71 @@ def run():
 
     st.markdown(
         """
-        This is your app's second tab. Fill it in `tabs/second_tab.py`.
-        You can and probably should rename the file.
+        ## Identification des champignons
+        Le champignon possède un label (nom). Ce label est unique pour chaque espèce, nous l'utiliserons donc comme variable cible.  
+        Initialement, la variable cible contient 11999 espèces enregistrées:  
+        Les histogrammes ci-dessous représentent la répartition des espèces observées.
+        En examinant la distribution initiale de la variable cible, nous constatons que certaines espèces sont très bien représentées, tandis que d'autres sont sous-représentées.  
+        Par exemple, une des espèces est représentée par 2 images sur un total de 647 615.
+        
+        """
+    )
+    # todo delete
+    chart_data = pd.DataFrame(np.random.randn(20, 3), columns=list("abc"))
+    #st.line_chart(chart_data)
+    #
+
+    #=====================================================
+    # Analyse des labels de champignons dans l'echantillon
+    #=====================================================
+    infos_images  = pd.read_csv(config.INFOS_IMAGES_PATH, low_memory=False)
+    # Représentation de la distribution de la variable :
+
+
+    fig = plt.figure(figsize=(12, 20))
+    sns.countplot(data=infos_images, y="label", order=infos_images["label"].value_counts().index)
+    plt.xlabel("Nombre d'images")
+    plt.ylabel("Espèces de champignon")
+    plt.title("Répartition des espèces de champignons dans l'échantillon")
+    st.pyplot(fig)
+
+    st.markdown(
+            """
+            ## Top 10 des champignons les plus représentés
+            Nous sommes dans un cas de distribution déséquilibrée.  
+            Pour des raisons techniques (temps de traitements des données), nous allons nous concentrer sur les 10 espèces les plus représentées.
+            Néanmoins si nous devions travailler sur l'ensemble des espèces, nous devrions utiliser des techniques de rééquilibrage des données (ex. oversampling, undersampling, SMOTE, etc.).
+            """
+        )
+
+    # Création du top 10 des espèces les plus représentées.
+
+    # Analyse des labels de champignons dans l'echantillon
+    top10 = pd.read_csv(config.TOP10_PATH, low_memory=False)
+    fig = plt.figure(figsize=(8, 6))
+    sns.countplot(data=top10, x="label", order=top10["label"].value_counts().index)
+    plt.xlabel("Espèces de champignon")
+    plt.xticks(rotation=70)
+    plt.ylabel("Nombre d'images")
+    plt.title("TOP 10 des espèces les plus représentées")
+    st.pyplot(fig)
+
+    st.markdown(
+            """
+            ### Répartition proportinonelle à l'ensemble du jeu de données
+            """
+        )
+
+    comptage_valeurs = infos_images['label'].value_counts()
+    top10_label = comptage_valeurs.head(10)
+
+    # Reste des valeurs présentes :
+    reste_hors_top10 = comptage_valeurs.iloc[10:].sum()
+
+    # Création d'une series contenant le top 10 et le reste.
+    top10_et_reste = top10_label.append(pd.Series([reste_hors_top10], index=['Autres']))
+
+    # Calcul des pourcentages pour chaque valeur (espèce) :
 
         ## Test
 
