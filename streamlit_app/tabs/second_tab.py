@@ -78,8 +78,14 @@ def run():
     # Création d'une series contenant le top 10 et le reste.
     top10_et_reste = top10_label.append(pd.Series([reste_hors_top10], index=['Autres']))
 
+    
     # Calcul des pourcentages pour chaque valeur (espèce) :
 
+
+#!unzip '/content/drive/MyDrive/SAS/images.zip' -d '/images'
+
+    st.markdown(
+            """
         ## Test
 
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida urna vel tincidunt vestibulum. Nunc malesuada molestie odio, vel tincidunt arcu fringilla hendrerit. Sed leo velit, elementum nec ipsum id, sagittis tempus leo. Quisque viverra ipsum arcu, et ullamcorper arcu volutpat maximus. Donec volutpat porttitor mi in tincidunt. Ut sodales commodo magna, eu volutpat lacus sodales in. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam interdum libero non leo iaculis bibendum. Suspendisse in leo posuere risus viverra suscipit.
