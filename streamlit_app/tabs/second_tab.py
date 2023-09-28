@@ -116,51 +116,16 @@ def run():
         -	Le total de pixels en hauteur x largeur (sans les canaux RGB), correspond en majorité à 75 000 px, une partie importante d’entre elles comporte 70 000 px.
         """
     )
-    import cv2
-    def extract_features(url_img):
 
-        '''
-        Extrait les features des images, les renvoient sous forme d'un DataFrame contenant les largeurs, hauteurs, et moyennes RGB
-            - url_img : Chemin des images
-        '''
-
-        img = cv2.imread(url_img)
-        hauteur, largeur, canal = img.shape
-        features = {
-            'largeur': largeur,
-            'hauteur': hauteur,
-            'moyenne_rouge': np.mean(img[:,:,2]),
-            'moyenne_vert': np.mean(img[:,:,1]),
-            'moyenne_bleu': np.mean(img[:,:,0])}
-        
-        return features
-    
-    # Extraction des features des images du top 10
-    liste_features = []
-
-    for index, row in top10.iterrows():
-        filepath = row['image_url']
-        features = extract_features(filepath)
-        liste_features.append(features)
-
-    features_top10 = pd.DataFrame(liste_features)
-    features_top10['moyenne_couleurs'] = (features_top10['moyenne_rouge']\
-                                            + features_top10['moyenne_vert']\
-                                            + features_top10['moyenne_bleu']) / 3
-
-    features_top10['label'] = top10['label']
-    features_top10.head()
+    st.image(Image.open("../img/imgSize_boxplot.jpeg"))
+    #import cv2
+    #img_color = cv2.imread("img/imgSize_boxplot.jpeg", cv2.IMREAD_COLOR)
+    #fig = plt.figure(figsize = (8,5))
+    #plt.imshow(img_color)
+    #st.pyplot(fig)
 
 
-    fig = plt.figure(figsize=(16,12))
-    sns.catplot(features_top10, kind='boxen')
-    plt.grid(False)
-    plt.title('Box Plot des features')
-    plt.xticks(rotation = 45);
 
-    st.pyplot(fig)
-
-    
     st.markdown(
         """
         ## Test 3
