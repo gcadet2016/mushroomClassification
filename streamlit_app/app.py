@@ -8,7 +8,7 @@ import streamlit as st
 import config
 
 # TODO : you can (and should) rename and add tabs in the ./tabs folder, and import them here.
-from tabs import intro, second_tab, third_tab
+from tabs import intro, tab2_explore, tab3_model, tab10_test_models
 
 
 st.set_page_config(
@@ -28,8 +28,9 @@ st.markdown(f"<style>{style}</style>", unsafe_allow_html=True)
 TABS = OrderedDict(
     [
         (intro.sidebar_name, intro),
-        (second_tab.sidebar_name, second_tab),
-        (third_tab.sidebar_name, third_tab),
+        (tab2_explore.sidebar_name, tab2_explore),
+        (tab3_model.sidebar_name, tab3_model),
+        (tab10_test_models.sidebar_name, tab10_test_models),
     ]
 )
 
